@@ -20,13 +20,13 @@ def pregunta_01():
     digits = datasets.load_digits()
 
     # Imprima los nombres de la variable target del dataset
-    print(digits.target)
+    print(digits.target_names)
 
     # Imprima las dimensinoes de matriz de datos
     print(digits.data.shape)
 
     # Imprima las dimensiones del vector de salida
-    print(digits.data.shape)
+    print(digits.target.shape)
 
 
 def pregunta_02():
@@ -59,7 +59,7 @@ def pregunta_02():
     knn.fit(X_train, y_train)
     
     # Imprima la precisión (score) del clasificador en el conjunto de datos de prueba
-    print(round(knn.score(X_train, y_train), 4))
+    print(round(knn.score(X_test, y_test), 4))
 
 
 def pregunta_03():
